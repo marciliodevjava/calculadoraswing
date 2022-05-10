@@ -8,8 +8,10 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 
+import br.com.cod3r.calc.modelo.Memoria;
+
 @SuppressWarnings("serial")
-public class Teclado extends JPanel implements ActionListener{
+public class Teclado extends JPanel implements ActionListener {
 
 	private Color COR_CINZA_ESCUR0 = new Color(68, 69, 68);
 	private Color COR_CINZA_CLARO = new Color(97, 100, 99);
@@ -67,9 +69,10 @@ public class Teclado extends JPanel implements ActionListener{
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		if(e.getSource() instanceof JButton) {
+		if (e.getSource() instanceof JButton) {
 			JButton botao = (JButton) e.getSource();
 			System.out.println(botao.getText());
+			Memoria.getInstancia().processarComando(botao.getText());
 		}
 	}
 
