@@ -1,11 +1,43 @@
 package br.com.cod3r.calc.visao;
 
+import java.awt.Color;
+import java.awt.GridLayout;
+
 import javax.swing.JPanel;
 
 @SuppressWarnings("serial")
 public class Teclado extends JPanel {
 
+	private Color COR_CINZA_ESCUR0 = new Color(68, 69, 68);
+	private Color COR_CINZA_CLARO = new Color(97, 100, 99);
+	private Color COR_LARANJA = new Color(242, 163, 60);
+
 	public Teclado() {
+		setLayout(new GridLayout(5, 4));
+		add(new Botao("AC", COR_CINZA_ESCUR0));
+		add(new Botao("+/-", COR_CINZA_ESCUR0));
+		add(new Botao("%", COR_CINZA_ESCUR0));
+		add(new Botao("/", COR_LARANJA));
+		
+		add(new Botao("7", COR_CINZA_CLARO));
+		add(new Botao("8", COR_CINZA_CLARO));
+		add(new Botao("9", COR_CINZA_CLARO));
+		add(new Botao("X", COR_LARANJA));
+		
+		add(new Botao("4", COR_CINZA_CLARO));
+		add(new Botao("5", COR_CINZA_CLARO));
+		add(new Botao("6", COR_CINZA_CLARO));
+		add(new Botao("-", COR_LARANJA));
+		
+		add(new Botao("1", COR_CINZA_CLARO));
+		add(new Botao("2", COR_CINZA_CLARO));
+		add(new Botao("3", COR_CINZA_CLARO));
+		add(new Botao("+", COR_LARANJA));
+		
+		add(new Botao("0", COR_CINZA_CLARO));
+		add(new Botao("0", COR_CINZA_CLARO));
+		add(new Botao(",", COR_CINZA_CLARO));
+		add(new Botao("=", COR_LARANJA));
 	}
 
 }
